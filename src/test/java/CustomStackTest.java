@@ -60,7 +60,7 @@ public class CustomStackTest {
     public void testWhenSearchingAnElementInAStackWithOneElementTheSearchMethodShouldReturnZero(){
         myCustomStack.push(10);
         int elementPosition = myCustomStack.search(10);
-        assertEquals(0, elementPosition);
+        assertEquals(1, elementPosition);
     }
 
     @Test
@@ -69,7 +69,9 @@ public class CustomStackTest {
         myCustomStack.push(151);
         myCustomStack.push(33);
         int elementPosition = myCustomStack.search(33);
-        assertEquals(2, elementPosition);
+        assertEquals(1, elementPosition);
+        int elementPosition2 = myCustomStack.search(151);
+        assertEquals(2, elementPosition2);
     }
 
     @Test

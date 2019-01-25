@@ -39,7 +39,7 @@ public class CustomStack {
 
     public int search(Integer element){
         if(stack.contains(element)){
-            return stack.indexOf(element);
+            return stack.size()-stack.indexOf(element);
         }
         return -1;
     }
